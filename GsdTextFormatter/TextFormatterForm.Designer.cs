@@ -46,6 +46,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.separateSpacesCheck = new System.Windows.Forms.CheckBox();
+            this.noCsvSpacesCheck = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -274,9 +275,11 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.AutoSize = true;
-            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.noCsvSpacesCheck, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.separateSpacesCheck, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -311,6 +314,19 @@
             this.separateSpacesCheck.TabIndex = 0;
             this.separateSpacesCheck.Text = "Split input on spaces";
             this.separateSpacesCheck.UseVisualStyleBackColor = true;
+            // 
+            // noCsvSpacesCheck
+            // 
+            this.noCsvSpacesCheck.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.noCsvSpacesCheck.AutoSize = true;
+            this.noCsvSpacesCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noCsvSpacesCheck.Location = new System.Drawing.Point(385, 8);
+            this.noCsvSpacesCheck.Margin = new System.Windows.Forms.Padding(30, 8, 8, 8);
+            this.noCsvSpacesCheck.Name = "noCsvSpacesCheck";
+            this.noCsvSpacesCheck.Size = new System.Drawing.Size(183, 29);
+            this.noCsvSpacesCheck.TabIndex = 9;
+            this.noCsvSpacesCheck.Text = "No CSV Spaces";
+            this.noCsvSpacesCheck.UseVisualStyleBackColor = true;
             // 
             // TextFormatterForm
             // 
@@ -355,6 +371,7 @@
         private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Button csvFormatButton;
         private System.Windows.Forms.Button SQLINFormatButton;
+        private System.Windows.Forms.CheckBox noCsvSpacesCheck;
     }
 }
 

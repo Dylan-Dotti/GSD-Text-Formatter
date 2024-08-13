@@ -24,7 +24,7 @@ namespace GsdTextFormatter
         private void CsvFormatButton_Click(object sender, EventArgs e)
         {
             resultBox.Text = converter.GetCsvFormatted(inputBox.Text,
-                separateSpacesCheck.Checked);
+                separateSpacesCheck.Checked, !noCsvSpacesCheck.Checked);
         }
 
         private void NewlineFormatButton_Click(object sender, EventArgs e)

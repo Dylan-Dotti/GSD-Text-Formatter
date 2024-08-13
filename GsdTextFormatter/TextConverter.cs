@@ -46,10 +46,11 @@ namespace GsdTextFormatter
             return ExceptionWrapper(convertFunc);
         }
 
-        public string GetCsvFormatted(string input, bool splitSpaces)
+        public string GetCsvFormatted(string input, bool splitSpaces, bool outputSpaces)
         {
+            string delimiter = outputSpaces ? ", " : ",";
             Func<string> convertFunc = () => 
-                GetRegularFormatted(input, ", ", splitSpaces);
+                GetRegularFormatted(input, delimiter, splitSpaces);
             return ExceptionWrapper(convertFunc);
         }
 
